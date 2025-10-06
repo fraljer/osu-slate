@@ -5,4 +5,7 @@ for /D %%d in (*-assets) do (
 	robocopy "%%d" ..\ * /NFL /NDL /NJH /NJS /nc /ns
 )
 
-pause
+echo Done exporting, exiting in 3 seconds.
+
+timeout /t 3 /nobreak >nul
+exit
